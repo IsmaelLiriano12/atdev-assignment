@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Last Check Calculator</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    </head>
+    <body>
+        <header class="container-fluid bg-success text-center p-3 mb-3">
+            <h1>Last Paycheck Calculator</h1>
+        </header>
+
+        <main>
+            <div class="container">
+                <div class="row justify-content-between">
+                    <section id="form" class="col-lg-5 card p-3 shadow">
+                        <form id="calculator-form">
+                            <label for="entryDate" class="form-label">Entry date</label>
+                            <input type="date" name="entryDate" id="entryDate" class="form-control" required>
+        
+                            <label for="departureDate" class="form-label">Departure date</label>
+                            <input type="date" name="lastDay" id="departureDate" class="form-control" required>
+        
+                            <label for="monthlySalary" class="form-label">Monthly salary (in DOP)</label>
+                            <input type="number" name="monthlySalary" id="monthlySalary" 
+                                   class="form-control" placeholder="Monthly Salary" required>
+        
+                            <label>Have you been pre-warned?</label>
+    
+                            <div class="form-check">
+                                <input type="radio" name="hasBeenForewarned" id="hasBeenPrewarned" class="form-check-input">
+                                <label for="hasBeenPrewarned" class="form-check-label">Yes</label>
+                            </div>
+                            <div class="form-check">
+                                <input type="radio" name="hasBeenForewarned" id="hasNotBeenPrewarned" class="form-check-input" checked>
+                                <label for="hasNotBeenPrewarned" class="form-check-label">No</label>
+                            </div>
+    
+                            <label class="form-label">Have you taken this year's vacations?</label>
+    
+                            <div class="form-check">
+                                <input type="radio" name="hasTakenVacations" id="hasTakenVacations" class="form-check-input">
+                                <label for="hasTakenVacations" class="form-check-label">Yes</label>
+                            </div>
+    
+                            <div class="form-check">
+                                <input type="radio" name="hasTakenVacations" id="hasNotTakenVacations" class="form-check-input" checked>
+                                <label for="hasNotTakenVacations" class="form-check-label">No</label>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-success mt-2" >Calculate</button>
+                        </form>
+                    </section>
+
+                    <section id="results" class="col-lg-6 card p-3 shadow">
+                        <h2>Results</h2>
+                        <div class="row">
+                            <p class="col-6">Vacations</p>
+                            <p id="vacations" class="col-6">0</p>
+                        </div>
+                        <div class="row">
+                            <p class="col-6">Christmas bonus</p>
+                            <p id="christmas-bonus" class="col-6">0</p>
+                        </div>
+                        <div class="row">
+                            <p class="col-6">Notice pay</p>
+                            <p id="notice-pay" class="col-6">0</p>
+                        </div>
+                        <div class="row">
+                            <p class="col-6">Severance pay</p>
+                            <p id="severance-pay" class="col-6">0</p>
+                        </div>
+                        <div class="row">
+                            <p class="col-6 fw-bold">Total</p>
+                            <p id="total" class="col-6 fw-bold">0</p>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+            <footer class="container mt-2">
+                <p>I took all calculations from <a href="https://calculo.mt.gob.do/">here</a>.</p>
+            </footer>
+        </main>
+        <script src="js/app.js"></script>
+    </body>
+</html>
